@@ -46,5 +46,5 @@ tab2.subheader("Bar Chart")
 tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
 fig, ax = plt.subplots()
-sns.distplot(df['Music effects'], ax=ax)
+sns.distplot(df['Hours per day'], ax=ax)
 st.pyplot(fig)
