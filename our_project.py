@@ -31,3 +31,18 @@ if st.button("Generate Report"):
   import streamlit as st
   import streamlit.components.v1 as components
 
+
+
+# Display a header for the Visualization section
+st.markdown("## Visualization")
+
+tab1, tab2 = st.tabs(["Line Chart", "Bar Chart"])
+
+tab1.subheader("Line Chart")
+# Display a line chart for the selected variables
+tab1.line_chart(data=df, x="Age", y="Music effects", width=0, height=0, use_container_width=True)
+
+tab2.subheader("Bar Chart")
+# Display a bar chart for the selected variables
+tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
+
