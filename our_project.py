@@ -1,18 +1,8 @@
-import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import plotly.express as px
 import streamlit as st
-import random
-from PIL import Image
-import altair as alt
-from htbuilder import HtmlElement, div, hr, a, p, img, styles
-from htbuilder.units import percent, px
-import pandas_profiling
-from streamlit_pandas_profiling import st_profile_report
-
 
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
