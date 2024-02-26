@@ -33,7 +33,6 @@ if st.button("Generate Report"):
 
 
 
-# Display a header for the Visualization section
 st.markdown("## Visualization")
 
 tab1, tab2 = st.tabs(["Line Chart", "Bar Chart"])
@@ -46,3 +45,6 @@ tab2.subheader("Bar Chart")
 # Display a bar chart for the selected variables
 tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
+fig, ax = plt.subplots()
+sns.distplot(df['Music effects'], ax=ax)
+st.pyplot(fig)
