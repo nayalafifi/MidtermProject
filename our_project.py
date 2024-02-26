@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import looker as lk
 
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
