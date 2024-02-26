@@ -4,8 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.header("Now lets move to the analysis!")
-
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
