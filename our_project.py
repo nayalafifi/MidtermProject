@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+from sklearn.model_selection import train_test_split
 
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
@@ -85,7 +86,6 @@ selection = st.selectbox(
 X = quantitative_df.drop(selection, axis=1)
 y = quantitative_df[selection]
 
-from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
