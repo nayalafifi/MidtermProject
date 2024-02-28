@@ -62,3 +62,9 @@ sns_plot = sns.pairplot(sampled_df_10_columns)
 
 # Show the plot in Streamlit
 st.pyplot(sns_plot)
+
+plt.figure(figsize=(10, 6))  # Optional: Adjust the figure size
+sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
+
+# Show the plot in Streamlit
+st.pyplot(plt)
