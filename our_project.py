@@ -48,3 +48,13 @@ tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 fig, ax = plt.subplots()
 sns.distplot(df['Hours per day'], ax=ax)
 st.pyplot(fig)
+
+
+
+st.markdown("## Linear Regression")
+
+
+sampled_df = df.sample(n=400)
+sampled_df_10_columns = sampled_df.iloc[:, :10]
+sns.pairplot(sampled_df_10_columns)
+
