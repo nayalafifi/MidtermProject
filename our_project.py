@@ -81,3 +81,6 @@ selection = st.selectbox(
     "Select the disorder you would like to predict",
     quantitative_df[["Anxiety", "Depression", "OCD", "Insomnia"]].columns
 )
+
+X = quantitative_df.drop(selection, axis=1)
+y = quantitative_df[selection]
