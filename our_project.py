@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-from sklearn.model_selection import train_test_split
+import train_test_split
 
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
