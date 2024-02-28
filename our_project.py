@@ -56,5 +56,9 @@ st.markdown("## Linear Regression")
 
 sampled_df = df.sample(n=400)
 sampled_df_10_columns = sampled_df.iloc[:, :10]
-sns.pairplot(sampled_df_10_columns)
 
+# Create a pairplot
+sns_plot = sns.pairplot(sampled_df_10_columns)
+
+# Show the plot in Streamlit
+st.pyplot(sns_plot)
