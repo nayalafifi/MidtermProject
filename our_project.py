@@ -68,3 +68,9 @@ sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
 
 # Show the plot in Streamlit
 st.pyplot(plt)
+
+
+
+st.markdown("## Linear")
+quantitative_df = df.select_dtypes(include=[np.number])
+selection = st.select("Select the disorder you would like to predict",quantitative_df[["Anxiety","Depression","OCD","Insomnia"]].columns)
