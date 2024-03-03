@@ -50,7 +50,7 @@ tab2.subheader("Bar Chart")
 # Display a bar chart for the selected variables
 tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
-
+df.drop("BPM", axis=1)
 
 st.markdown("## General graphs")
 
@@ -97,7 +97,7 @@ sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers a
 # Display the plot in Streamlit
 st.pyplot(plt)
 
-df.drop("BPM", axis=1)
+
 
 
 
