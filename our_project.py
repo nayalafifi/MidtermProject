@@ -171,6 +171,10 @@ elif selection == "Linear regression Results":
         
 elif selection == "Conclusions and Results":
         st.write("# Welcome to the conclusions and results page! ")
+        st.header("Below is our conclusions")
+        st.write("After looking through the graph visualizations, and studying the linear regression models and predictions, we found that firstly, the majority of music listeners expressed an improvement in their mental health. Next, we also found that listeners of younger ages generally have higher levels of the specific mental health disorder, and this applies to Anxiety, Insomnia, OCD, and Depression.")
+
+
 
 df = pd.read_csv('CLEANmmh.csv')
 
