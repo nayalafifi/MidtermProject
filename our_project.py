@@ -152,7 +152,7 @@ pred = lin_reg.predict(X_test)
 # Plotting
 plt.figure(figsize=(10,7))
 plt.figure(figsize=(10,7))
-plt.title(f"Actual vs. Predicted Levels of {selection} in Music Listeners", fontsize=22)
+plt.title(f"Actual vs. Predicted Levels of {selection} in Music Listeners", fontsize=20)
 plt.xlabel(f"Actual Levels of {selection} in Music Listeners", fontsize=16)
 plt.ylabel(f"Predicted Levels of {selection} in Music Listeners", fontsize=16)
 plt.scatter(x=y_test, y=pred)
