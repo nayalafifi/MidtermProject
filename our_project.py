@@ -163,7 +163,10 @@ plt.scatter(x=y_test, y=pred)
 st.pyplot(plt)
 
 
+MAE = metrics.mean_absolute_error(y_test, pred)
+MSE = metrics.mean_squared_error(y_test, pred)
+RMSE = np.sqrt(MSE)
 
-st.markdown('MAE:', metrics.mean_absolute_error(y_test, pred))
-print('MSE:', metrics.mean_squared_error(y_test, pred))
-print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, pred)))
+st.write(f'MAE: {MAE}')
+st.write(f'MSE: {MSE}')
+st.write(f'RMSE: {RMSE}')
