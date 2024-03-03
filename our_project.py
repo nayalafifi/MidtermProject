@@ -50,9 +50,9 @@ tab2.subheader("Bar Chart")
 # Display a bar chart for the selected variables
 tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
-fig, ax = plt.subplots()
-sns.distplot(df['Hours per day'], ax=ax)
-st.pyplot(fig)
+# fig, ax = plt.subplots()
+# sns.distplot(df['Hours per day'], ax=ax)
+# st.pyplot(fig)
 
 
 
