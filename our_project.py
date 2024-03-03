@@ -10,7 +10,7 @@ from sklearn import metrics as metrics
 st.sidebar.title("Navigation")
 selection = st.sidebar.radio("Go to", ["Home Page", "Pre-Study Assumptions", "General Graphs","Linear regression Results","Conclussion and Results"])
 
-if selection == "Home":
+if selection == "Home Page":
         st.write("# Welcome to the Home Page!")
         df = pd.read_csv('CLEANmmh.csv')
         df.head()
@@ -53,7 +53,8 @@ elif selection == "Pre-Study Assumptions":
     st.write("# Welcome to the Pre-Study Assumptions!")
     # Your analysis content here
 
-elif selection == "Welcome to the General graphs!":
+elif selection == "General Graphs":
+        st.write("# Welcome to the General Graphs page!")
         df = pd.read_csv('CLEANmmh.csv')
         sampled_df = df.sample(n=400)
         sampled_df_10_columns = sampled_df.iloc[:, :10]
