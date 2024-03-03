@@ -93,7 +93,7 @@ elif selection == "General Graphs":
         # Display the plot in Streamlit
         st.pyplot(plt)
 
-elif selection == "Linear regression":
+elif selection == "Linear regression Results":
         st.write("# Welcome to the linear regression page! ")
         quantitative_df = df.select_dtypes(include=[np.number])
         # quantitative_df = df.select_dtypes(include=[np.number])
