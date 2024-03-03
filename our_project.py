@@ -181,5 +181,6 @@ elif selection == "Conclusions and Results":
 
 elif selection == "Evaluation":
         st.write("# Please scan the QR code below to give us your review of our app!")
+        st.image("qr.png")
 
 
