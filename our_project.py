@@ -101,7 +101,7 @@ st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
 
 
-# df = pd.read_csv('CLEANmmh.csv')
+df = pd.read_csv('CLEANmmh.csv')
 
 
 # sampled_df = df.sample(n=400)
