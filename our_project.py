@@ -121,7 +121,21 @@ lin_reg.fit(X_train,y_train)
 # coeff_df = pd.DataFrame(lin_reg.coef_, X.columns, columns=['Coefficient'])
 # coeff_df
 
+X.columns #checking if the selection works
 
 
-X.columns
+feature_names = [f'Feature_{i}' for i in list(X.columns)]
+df_X = pd.DataFrame(X, columns=feature_names)
+# Coefficients represent the importance in linear regression
+coefficients = lin_reg.coef_
+
+# Making the coefficients positive to compare magnitude
+importance = np.abs(coefficients)
+
+# Plotting feature importance with feature names
+plt.figure(figsize=(10, 8))
+plt.barh(feature_names, importance)
+plt.xlabel('Absolute Coefficient Value')
+plt.title('Feature Importance (Linear Regression)')
+plt.show()
 
