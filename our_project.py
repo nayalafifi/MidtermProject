@@ -38,7 +38,7 @@ if selection == "Home Page":
           import streamlit as st
           import streamlit.components.v1 as components
         
-        
+        st.image("image2.jpg")
         
         st.markdown("## Visualization")
         
