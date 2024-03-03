@@ -80,7 +80,11 @@ df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
 
 
 
+pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
 
+plt.figure(figsize=(10, 6))
+sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+plt.show()
 
 
 
