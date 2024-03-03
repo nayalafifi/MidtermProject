@@ -151,9 +151,10 @@ st.pyplot(fig)
 pred = lin_reg.predict(X_test)
 # Plotting
 plt.figure(figsize=(10,7))
-plt.title("Actual vs. predicted Levels of",selection, "in Music Listeners", fontsize=25)
-plt.xlabel("Actual Levels of",selection, "In music Listeners, fontsize=18)
-plt.ylabel("Predicted Levels of ", selection, "in Music Listeners", fontsize=18)
+plt.figure(figsize=(10,7))
+plt.title(f"Actual vs. Predicted Levels of {selection} in Music Listeners", fontsize=25)
+plt.xlabel(f"Actual Levels of {selection} in Music Listeners", fontsize=18)
+plt.ylabel(f"Predicted Levels of {selection} in Music Listeners", fontsize=18)
 plt.scatter(x=y_test, y=pred)
 
 # Use Streamlit to render the plot
