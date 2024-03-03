@@ -56,7 +56,7 @@ tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
 
 
-st.markdown("## Linear Regression")
+st.markdown("## General graphs")
 
 
 sampled_df = df.sample(n=400)
@@ -73,6 +73,15 @@ sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
 
 # Show the plot in Streamlit
 st.pyplot(plt)
+
+df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
+
+
+
+
+
+
+
 
 
 
