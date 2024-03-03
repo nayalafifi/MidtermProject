@@ -8,10 +8,10 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics as metrics
 
 st.sidebar.title("Navigation")
-selection = st.sidebar.radio("Go to", ["Home", "Predictions", "General graphs","Linear regression"])
+selection = st.sidebar.radio("Go to", ["Home Page", "Pre-Study Assumptions", "General Graphs","Linear regression Results","Conclussion and Results"])
 
 if selection == "Home":
-        st.write("# Welcome to the Home Page")
+        st.write("# Welcome to the Home Page!")
         df = pd.read_csv('CLEANmmh.csv')
         df.head()
         st.markdown("## Columns")
@@ -49,15 +49,56 @@ if selection == "Home":
         tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
 
-elif selection == "Prediction":
-    st.write("# Prediction Page")
+elif selection == "Pre-Study Assumptions":
+    st.write("# Welcome to the Pre-Study Assumptions!")
     # Your analysis content here
 
-elif selection == "General graphs":
-    st.write("# Predictions Page")
-    # Your predictions content here
+elif selection == "Welcome to the General graphs!":
+        st.write("# Predictions Page")
+        df = pd.read_csv('CLEANmmh.csv')
+        sampled_df = df.sample(n=400)
+        sampled_df_10_columns = sampled_df.iloc[:, :10]
+        
+        # Create a pairplot
+        sns_plot = sns.pairplot(sampled_df_10_columns)
+        
+        # Show the plot in Streamlit
+        st.pyplot(sns_plot)
+        
+        plt.figure(figsize=(10, 6))  # Optional: Adjust the figure size
+        sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
+        
+        # Show the plot in Streamlit
+        st.pyplot(plt)
+        
+        
+        quantitative_df = df.select_dtypes(include=[np.number])
+        df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
+        
+        
+        
+        
+        
+        
+        # pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
+        
+        # plt.figure(figsize=(10, 6))
+        # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+        # plt.show()
+        
+        pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
+        
+        # Display the pivot table in your Streamlit app
+        st.write(pivot_table)
+        
+        # Create a heatmap using seaborn and display it using Streamlit
+        plt.figure(figsize=(10, 6))
+        sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+        
+        # Display the plot in Streamlit
+        st.pyplot(plt)
 
-elif selection == "Linear regression":
+elif selection == "Welcome to the Linear regression! ":
     st.write("# Linear regression")
     # Your predictions content here
 
@@ -66,86 +107,50 @@ st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
 
 
-df = pd.read_csv('CLEANmmh.csv')
-# df.head()
-# st.markdown("## Columns")
-# df.columns
-
-# ## Description of Dataset
-
-# num = st.number_input('No of Rows',5,10)
-# st.dataframe(df.head(num))
-
-# ### Description of the dataset
-
-# st.dataframe(df.describe())
-
-# if st.button("Show Describe Code"):
-#         code = '''df.describe()'''
-#         st.code(code, language='python')
-
-# if st.button("Generate Report"):
-#   import streamlit as st
-#   import streamlit.components.v1 as components
+# df = pd.read_csv('CLEANmmh.csv')
 
 
+# sampled_df = df.sample(n=400)
+# sampled_df_10_columns = sampled_df.iloc[:, :10]
 
-# st.markdown("## Visualization")
+# # Create a pairplot
+# sns_plot = sns.pairplot(sampled_df_10_columns)
 
-# tab1, tab2 = st.tabs(["Line Chart", "Bar Chart"])
+# # Show the plot in Streamlit
+# st.pyplot(sns_plot)
 
-# tab1.subheader("Line Chart")
-# # Display a line chart for the selected variables
-# tab1.line_chart(data=df, x="Age", y="Music effects", width=0, height=0, use_container_width=True)
+# plt.figure(figsize=(10, 6))  # Optional: Adjust the figure size
+# sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
 
-# tab2.subheader("Bar Chart")
-# # Display a bar chart for the selected variables
-# tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
-
-st.markdown("## General graphs")
-
-
-sampled_df = df.sample(n=400)
-sampled_df_10_columns = sampled_df.iloc[:, :10]
-
-# Create a pairplot
-sns_plot = sns.pairplot(sampled_df_10_columns)
-
-# Show the plot in Streamlit
-st.pyplot(sns_plot)
-
-plt.figure(figsize=(10, 6))  # Optional: Adjust the figure size
-sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
-
-# Show the plot in Streamlit
-st.pyplot(plt)
+# # Show the plot in Streamlit
+# st.pyplot(plt)
 
 
-quantitative_df = df.select_dtypes(include=[np.number])
-df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
+# quantitative_df = df.select_dtypes(include=[np.number])
+# df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
 
 
 
 
 
+
+# # pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
+
+# # plt.figure(figsize=(10, 6))
+# # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+# # plt.show()
 
 # pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
 
+# # Display the pivot table in your Streamlit app
+# st.write(pivot_table)
+
+# # Create a heatmap using seaborn and display it using Streamlit
 # plt.figure(figsize=(10, 6))
 # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
-# plt.show()
 
-pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
-
-# Display the pivot table in your Streamlit app
-st.write(pivot_table)
-
-# Create a heatmap using seaborn and display it using Streamlit
-plt.figure(figsize=(10, 6))
-sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
-
-# Display the plot in Streamlit
-st.pyplot(plt)
+# # Display the plot in Streamlit
+# st.pyplot(plt)
 
 
 
