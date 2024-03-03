@@ -133,9 +133,17 @@ coefficients = lin_reg.coef_
 importance = np.abs(coefficients)
 
 # Plotting feature importance with feature names
-plt.figure(figsize=(10, 8))
-plt.barh(feature_names, importance)
-plt.xlabel('Absolute Coefficient Value')
-plt.title('Feature Importance (Linear Regression)')
-plt.show()
+feature_names = [f'Feature_{i}' for i in list(X.columns)]
+df_X = pd.DataFrame(X, columns=feature_names)
+coefficients = lin_reg.coef_
 
+importance = np.abs(coefficients)
+
+# Plotting feature importance with feature names
+fig, ax = plt.subplots(figsize=(10, 8))  # Use Streamlit's pyplot instead of plt.show()
+ax.barh(feature_names, importance)
+ax.set_xlabel('Absolute Coefficient Value')
+ax.set_title('Feature Importance (Linear Regression)')
+
+# Streamlit uses st.pyplot() to display matplotlib figures
+st.pyplot(fig)
