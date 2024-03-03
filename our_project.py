@@ -147,3 +147,14 @@ ax.set_title('Feature Importance (Linear Regression)')
 
 # Streamlit uses st.pyplot() to display matplotlib figures
 st.pyplot(fig)
+
+
+# Plotting
+plt.figure(figsize=(10,7))
+plt.title("Actual vs. predicted Hours per Day", fontsize=25)
+plt.xlabel("Actual test set Hours per Day", fontsize=18)
+plt.ylabel("Predicted Hours per Day", fontsize=18)
+plt.scatter(x=y_test, y=pred)
+
+# Use Streamlit to render the plot
+st.pyplot(plt)
