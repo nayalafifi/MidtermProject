@@ -105,6 +105,9 @@ st.markdown("## Linear Regression")
 quantitative_df = df.select_dtypes(include=[np.number])
 # quantitative_df = df.select_dtypes(include=[np.number])
 
+df.drop("BPM", axis=1)
+
+
 # Use 'st.selectbox' to create a dropdown menu
 selection = st.selectbox(
     "Select the disorder you would like to predict",
