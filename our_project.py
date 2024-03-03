@@ -97,6 +97,7 @@ sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers a
 # Display the plot in Streamlit
 st.pyplot(plt)
 
+df.drop("BPM", axis=1)
 
 
 
@@ -104,8 +105,6 @@ st.markdown("## Linear Regression")
 
 quantitative_df = df.select_dtypes(include=[np.number])
 # quantitative_df = df.select_dtypes(include=[np.number])
-
-df.drop("BPM", axis=1)
 
 
 # Use 'st.selectbox' to create a dropdown menu
