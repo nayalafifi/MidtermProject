@@ -122,3 +122,6 @@ lin_reg.fit(X_train,y_train)
 # coeff_df
 
 
+
+X.columns
+
