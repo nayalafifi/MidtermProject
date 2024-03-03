@@ -164,6 +164,6 @@ st.pyplot(plt)
 
 
 
-print('MAE:', metrics.mean_absolute_error(y_test, pred))
+st.markdown('MAE:', metrics.mean_absolute_error(y_test, pred))
 print('MSE:', metrics.mean_squared_error(y_test, pred))
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, pred)))
