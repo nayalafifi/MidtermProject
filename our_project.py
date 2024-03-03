@@ -173,7 +173,10 @@ elif selection == "Conclusions and Results":
         st.write("# Welcome to the conclusions and results page! ")
         st.header("Below is our conclusions")
         st.write("After looking through the graph visualizations, and studying the linear regression models and predictions, we found that firstly, the majority of music listeners expressed an improvement in their mental health. Next, we also found that listeners of younger ages generally have higher levels of the specific mental health disorder, and this applies to Anxiety, Insomnia, OCD, and Depression.")
-
+        st.image("pasted.png")
+        st.header("Furthermore...")
+        st.write("The Linear regression models indicated to us that for instance when the user selects anxiety as the test disorder, the model's predictions are approximately a Mean Absolute Error of  1.688 units off from the actual anxiety levels. The Mean Squared Error is approximately 4.266 indicating the the difference between the predicted value and the actual value squared, so if its a large margin of error the squared value would be very large, and if small than vice versa. The Root Mean Squared Error  is  2.065, the square root of the MSE. While the error margins are not too large, there still is room for improvement and we hope that as we advance through the semester we can better learn how to limit these errors and improve this project.")
+        # st.image(
 
 
 df = pd.read_csv('CLEANmmh.csv')
