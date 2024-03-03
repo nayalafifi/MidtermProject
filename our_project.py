@@ -74,6 +74,8 @@ sns.histplot(df['Age'], kde=True)  # kde=True adds a density curve
 # Show the plot in Streamlit
 st.pyplot(plt)
 
+
+quantitative_df = df.select_dtypes(include=[np.number])
 df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
 
 
