@@ -95,6 +95,7 @@ elif selection == "General Graphs":
 
 elif selection == "Linear regression Results":
         st.write("# Welcome to the linear regression page! ")
+        df = pd.read_csv('CLEANmmh.csv')
         quantitative_df = df.select_dtypes(include=[np.number])
         # quantitative_df = df.select_dtypes(include=[np.number])
         
