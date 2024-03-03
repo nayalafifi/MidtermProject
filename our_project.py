@@ -55,7 +55,7 @@ if selection == "Home Page":
 
 elif selection == "Pre-Study Assumptions":
     st.write("# Welcome to the Pre-Study Assumptions!")
-    # Your analysis content here
+    st.image("assumptions.jpg")
 
 elif selection == "General Graphs":
         st.write("# Welcome to the General Graphs page!")
