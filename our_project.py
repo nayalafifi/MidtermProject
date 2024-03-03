@@ -183,7 +183,3 @@ elif selection == "Evaluation":
         st.write("# Please scan the QR code below to give us your review of our app!")
 
 
-
-df = pd.read_csv('CLEANmmh.csv')
-
-
