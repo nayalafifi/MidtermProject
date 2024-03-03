@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics as metrics
 
 st.sidebar.title("Navigation")
-selection = st.sidebar.radio("Go to", ["Home Page", "Pre-Study Assumptions", "General Graphs","Linear regression Results","Conclussion and Results"])
+selection = st.sidebar.radio("Go to", ["Home Page", "Pre-Study Assumptions", "General Graphs","Linear regression Results","Conclusions and Results"])
 
 if selection == "Home Page":
         st.title("Mental Health and Music Correlation Data Visualisation and Predictions!")
@@ -168,7 +168,9 @@ elif selection == "Linear regression Results":
         st.write(f'MAE: {MAE}')
         st.write(f'MSE: {MSE}')
         st.write(f'RMSE: {RMSE}')
-
+        
+elif selection == "Conclusions and Results":
+        st.write("# Welcome to the conclusions and results page! ")
 
 df = pd.read_csv('CLEANmmh.csv')
 
