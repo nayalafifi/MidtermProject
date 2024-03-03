@@ -50,8 +50,6 @@ tab2.subheader("Bar Chart")
 # Display a bar chart for the selected variables
 tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
-df.drop("BPM", axis=1)
-
 st.markdown("## General graphs")
 
 
@@ -122,6 +120,7 @@ lin_reg = LinearRegression()
 lin_reg.fit(X_train,y_train)
 # coeff_df = pd.DataFrame(lin_reg.coef_, X.columns, columns=['Coefficient'])
 # coeff_df
+df.drop("BPM", axis=1)
 
 X.columns #checking if the selection works
 
