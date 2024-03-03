@@ -50,10 +50,6 @@ tab2.subheader("Bar Chart")
 # Display a bar chart for the selected variables
 tab2.bar_chart(data=df, x="Age", y="Music effects", use_container_width=True)
 
-# fig, ax = plt.subplots()
-# sns.distplot(df['Hours per day'], ax=ax)
-# st.pyplot(fig)
-
 
 
 st.markdown("## General graphs")
@@ -80,13 +76,26 @@ df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
 
 
 
+
+
+
+# pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
+
+# plt.figure(figsize=(10, 6))
+# sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+# plt.show()
+
 pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
 
+# Display the pivot table in your Streamlit app
+st.write(pivot_table)
+
+# Create a heatmap using seaborn and display it using Streamlit
 plt.figure(figsize=(10, 6))
 sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
-plt.show()
 
-
+# Display the plot in Streamlit
+st.pyplot(plt)
 
 
 
