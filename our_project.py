@@ -118,7 +118,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 lin_reg = LinearRegression()
 lin_reg.fit(X_train,y_train)
-coeff_df = pd.DataFrame(lin_reg.coef_, X.columns, columns=['Coefficient'])
-coeff_df
+# coeff_df = pd.DataFrame(lin_reg.coef_, X.columns, columns=['Coefficient'])
+# coeff_df
 
 
