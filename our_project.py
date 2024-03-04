@@ -181,6 +181,7 @@ elif selection == "Linear regression Results":
         st.write(f'MAE: {MAE}')
         st.write(f'MSE: {MSE}')
         st.write(f'RMSE: {RMSE}')
+        st.write('R2', metrics.r2_score(y_test, pred))
         
 elif selection == "Conclusions and Results":
         st.write("# Welcome to the conclusions and results page! ")
