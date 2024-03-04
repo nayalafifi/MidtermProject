@@ -18,7 +18,7 @@ if selection == "Home Page":
         st.write("This data set is the result of a survey conducted in 2020. It mainly touches on people's music listening habits and its effects on mental health. The key features of this data set include overall effects of music, age, streaming platform, hours per day, favourite Genre and more. This dataset is an optimal way to provide insights into people's music listening patterns, preferences, and the effects on mental health among different age groups and lifestyles. ​This study will consist of three main parts: an introduction and Brief into the data set, some visuals/graphs to visualise the data set, and the predictions we have compared to the predictions we accessed through linear regression. We mainly focused our study and prediction prior to the study on mental disorder levels in music listeners for several reasons, 1- our data was very suitable for this specifc study because the study sample associated a numerical value for their mental disorder. 2- Additionally, since linear regression models only work with one variable, we decided to allow the user to choose this variable, and view the actual vs. predicted graph accordingly.")
         df = pd.read_csv('CLEANmmh.csv')
         df.head()
-        st.write("In case you would like to view the data set,[link](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results)"]
+        st.write("In case you would like to view the data set,[link](https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results)")
         st.markdown("## Columns")
         df.columns
         
