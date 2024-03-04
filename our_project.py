@@ -178,6 +178,7 @@ elif selection == "Linear regression Results":
         MSE = metrics.mean_squared_error(y_test, pred)
         RMSE = np.sqrt(MSE)
         R2 = metrics.r2_score(y_test, pred)
+        st.round(MAE,2)
         
         st.write(f'MAE: {MAE}')
         st.write(f'MSE: {MSE}')
