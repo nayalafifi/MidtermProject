@@ -91,9 +91,14 @@ elif selection == "General Graphs":
         # Display the pivot table in your Streamlit app
         st.write(pivot_table)
         
-        # Create a heatmap using seaborn and display it using Streamlit
+        # # Create a heatmap using seaborn and display it using Streamlit
+        # plt.figure(figsize=(10, 6))
+        # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+        
+        # # Display the plot in Streamlit
+        # st.pyplot(plt)
         plt.figure(figsize=(10, 6))
-        sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
+        sns.barplot(x='Category', y='Value', data=pivot_table)
         
         # Display the plot in Streamlit
         st.pyplot(plt)
