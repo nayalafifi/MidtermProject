@@ -175,9 +175,9 @@ elif selection == "Linear regression Results":
         
         
         MAE = round(metrics.mean_absolute_error(y_test, pred),2)
-        MSE = metrics.mean_squared_error(y_test, pred)
-        RMSE = np.sqrt(MSE)
-        R2 = metrics.r2_score(y_test, pred)
+        MSE = round(metrics.mean_squared_error(y_test, pred),2)
+        RMSE = round(np.sqrt(MSE),2)
+        R2 = round(metrics.r2_score(y_test, pred),2)
         # round(MAE,2)
         
         st.write(f'MAE: {MAE}')
