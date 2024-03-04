@@ -177,11 +177,12 @@ elif selection == "Linear regression Results":
         MAE = metrics.mean_absolute_error(y_test, pred)
         MSE = metrics.mean_squared_error(y_test, pred)
         RMSE = np.sqrt(MSE)
+        R2 = metrics.r2_score(y_test, pred)
         
         st.write(f'MAE: {MAE}')
         st.write(f'MSE: {MSE}')
         st.write(f'RMSE: {RMSE}')
-        st.write('R2', metrics.r2_score(y_test, pred))
+        st.write(f'R2: {R2}')
         
 elif selection == "Conclusions and Results":
         st.write("# Welcome to the conclusions and results page! ")
