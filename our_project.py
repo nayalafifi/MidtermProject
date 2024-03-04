@@ -98,7 +98,7 @@ elif selection == "General Graphs":
         # # Display the plot in Streamlit
         # st.pyplot(plt)
         plt.figure(figsize=(10, 6))
-        sns.barplot(x='Category', y='Value', data=pivot_table)
+        sns.barplot(x='Hours per day', y='Music effects', data=pivot_table)
         
         # Display the plot in Streamlit
         st.pyplot(plt)
