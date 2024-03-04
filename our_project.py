@@ -174,11 +174,11 @@ elif selection == "Linear regression Results":
         st.pyplot(plt)
         
         
-        MAE = metrics.mean_absolute_error(y_test, pred)
+        MAE = round(metrics.mean_absolute_error(y_test, pred),2)
         MSE = metrics.mean_squared_error(y_test, pred)
         RMSE = np.sqrt(MSE)
         R2 = metrics.r2_score(y_test, pred)
-        st.round(MAE,2)
+        # round(MAE,2)
         
         st.write(f'MAE: {MAE}')
         st.write(f'MSE: {MSE}')
