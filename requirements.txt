@@ -4,3 +4,4 @@ matplotlib
 seaborn
 streamlit
 scikit-learn
+pandas-profiling==3.6.6
