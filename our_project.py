@@ -6,6 +6,8 @@ import streamlit as st
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn import metrics as metrics
+import streamlit.components.v1 as components
+from streamlit_pandas_profiling import st_profile_report
 
 st.sidebar.title("Navigation")
 selection = st.sidebar.radio("Go to", ["Home Page", "Pre-Study Assumptions", "General Graphs","Linear regression Results","Conclusions and Results","Evaluation"])
@@ -36,8 +38,9 @@ if selection == "Home Page":
                 st.code(code, language='python')
         
         if st.button("Generate Report"):
-          import streamlit as st
-          import streamlit.components.v1 as components
+                pr = df.profile_report()
+                st_profile_report(pr)
+
         
         st.image("image2.jpg")
         
