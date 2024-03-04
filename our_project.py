@@ -106,7 +106,7 @@ elif selection == "Linear regression Results":
         
         # Use 'st.selectbox' to create a dropdown menu
         selection = st.selectbox(
-            "Click below to change the variable of the linear regression:",
+            "Choose below to change the variable of the linear regression:",
             quantitative_df[["Anxiety", "Depression", "OCD", "Insomnia"]].columns
         )
         
