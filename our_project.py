@@ -92,12 +92,21 @@ elif selection == "General Graphs":
         # # Display the plot in Streamlit
         # st.pyplot(plt)
 
-
         plt.figure(figsize=(10, 6))
-        sns.barplot(x='Hours per day', y='Music effects', data=pivot_table)
+        
+        # Assuming 'Time' is your x-axis and 'Value' is your y-axis.
+        # You will need to replace 'Time' and 'Value' with the actual column names from your DataFrame.
+        sns.lineplot(data=pivot_table, x='Hours per day', y='Music effects')
         
         # Display the plot in Streamlit
         st.pyplot(plt)
+
+
+        # plt.figure(figsize=(10, 6))
+        # sns.barplot(x='Hours per day', y='Music effects', data=pivot_table)
+        
+        # # Display the plot in Streamlit
+        # st.pyplot(plt)
 
 elif selection == "Linear regression Results":
         st.write("# Welcome to the linear regression page! ")
