@@ -37,9 +37,9 @@ if selection == "Home Page":
                 code = '''df.describe()'''
                 st.code(code, language='python')
         
-        if st.button("Generate Report"):
-                pr = df.profile_report()
-                st_profile_report(pr)
+        # if st.button("Generate Report"):
+        #         pr = df.profile_report()
+        #         st_profile_report(pr)
 
         
         st.image("image2.jpg")
