@@ -80,12 +80,7 @@ elif selection == "General Graphs":
         quantitative_df = df.select_dtypes(include=[np.number])
         df_sample_q = quantitative_df.sample(n=400).reset_index(drop=True)
 
-        # pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
-        
-        # plt.figure(figsize=(10, 6))
-        # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
-        # plt.show()
-        
+
         pivot_table = pd.pivot_table(df, index='Music effects', columns='Hours per day', aggfunc='size', fill_value=0)
         
         # Display the pivot table in your Streamlit app
@@ -94,16 +89,15 @@ elif selection == "General Graphs":
         # # Create a heatmap using seaborn and display it using Streamlit
         # plt.figure(figsize=(10, 6))
         # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
-        st.print(pivot_table.columns)
-        # sns.barplot(x='Music effects', y='Hours per day', data=pivot_table)
+        # # Display the plot in Streamlit
+        # st.pyplot(plt)
 
-        # # Display the plot in Streamlit
-        # st.pyplot(plt)
-        # plt.figure(figsize=(10, 6))
-        # sns.barplot(x='Hours per day', y='Music effects', data=pivot_table)
+
+        plt.figure(figsize=(10, 6))
+        sns.barplot(x='Hours per day', y='Music effects', data=pivot_table)
         
-        # # Display the plot in Streamlit
-        # st.pyplot(plt)
+        # Display the plot in Streamlit
+        st.pyplot(plt)
 
 elif selection == "Linear regression Results":
         st.write("# Welcome to the linear regression page! ")
