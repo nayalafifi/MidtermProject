@@ -94,7 +94,7 @@ elif selection == "General Graphs":
         # # Create a heatmap using seaborn and display it using Streamlit
         # plt.figure(figsize=(10, 6))
         # sns.heatmap(pivot_table, annot=True, fmt="d")  # Use fmt="d" to format numbers as integers
-        print(pivot_table.columns)
+        st.print(pivot_table.columns)
         # sns.barplot(x='Music effects', y='Hours per day', data=pivot_table)
 
         # # Display the plot in Streamlit
