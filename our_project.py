@@ -88,7 +88,7 @@ elif selection == "General Graphs":
         # Display the pivot table in your Streamlit app
         st.write(pivot_table)
         components.iframe("https://lookerstudio.google.com/embed/reporting/3071d4b7-ccbc-4359-aa27-2b2d0f5c9399/page/p_2vnr5s1wed",
-                      height=520)
+                      height=450)
         # <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/3071d4b7-ccbc-4359-aa27-2b2d0f5c9399/page/p_2vnr5s1wed" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 
 elif selection == "Linear regression Results":
